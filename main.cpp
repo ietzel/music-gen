@@ -24,31 +24,31 @@ int[3][][] chords = [
     [1, 15, 17, 20], //Madd9 (a wind bell)
     [1, 8, 15, 20, 22, 24, 25], //M13 omit 3rd (black hole sun)
     [1, 8, 13, 17, 18, 20], //Madd11 (christian women)
+    [], // (crazy hot)
+    [], // (intermezzio in a major)
     [1, 5, 6, 8, 13, 17, 20, 22], //Msus4sus13 (love of my life)
-    [1, 15, 16, 23], // m9 omit 5th (road taken)
-    [],
-    [],
-    []
+    [], // (overjoyed)
+    [1, 15, 16, 23], //m9 omit 5th (road taken)
   ],
   [ 
     [5, 18, 22, 25], //Mb13b9 omit 3rd, omit 5th, omit 7th (a wind bell)
     [1, 8, 15, 20, 22, 24, 25], //M13 omit 3rd (black hole sun)
     [1, 10, 15, 19, 20, 22], //M13#11 omit 3rd, omit 7th (christian women)
+    [], // (crazy hot)
+    [], // (intermezzio in a major)
     [1, 11, 13, 15, 17, 23], //9 omit 5th (love of my life)
+    [], // (overjoyed)
     [1, 17, 23, 27], //#9 omit 5th (road taken)
-    [],
-    [],
-    []
   ],
   [  
     [11, 25, 28, 33], //11 omit 3rd, omit 5th (a wind bell)
     [1, 8, 15, 20, 22, 24, 25], //M13 omit 3rd (black hole sun)
     [1, 15, 20, 24, 25, 27], //M9 omit 3rd (christian women)
+    [], // (crazy hot)
+    [], // (intermezzio in a major)
     [1, 8, 11, 13, 15, 16], //m9 (love of my life)
+    [], // (overjoyed)
     [1, 8, 11, 17], //m7 (road taken)
-    [],
-    [],
-    []
   ]
 ];
 
