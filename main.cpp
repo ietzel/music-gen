@@ -27,7 +27,7 @@ int[3][][] chords = [
     [1, 13, 25, 27, 28, 32, 37, 39, 40, 44, 49, 51, 52, 56], //madd9 (crazy hot)
     [1, 4, 9, 11, 16, 20, 21, 28], //m13 omit 9th omit 11th (intermezzio in a major)
     [1, 5, 6, 8, 13, 17, 20, 22], //Msus4sus13 (love of my life)
-    [], // (overjoyed)
+    [1, 13, 15, 17, 20, 25], //Madd9 (overjoyed)
     [1, 15, 16, 23], //m9 omit 5th (road taken)
   ],
   [ 
@@ -37,7 +37,7 @@ int[3][][] chords = [
     [1, 13, 29, 40, 41, 43, 49, 53, 54], //Madd11 (crazy hot)
     [1, 4, 7, 10, 15, 16, 19, 22, 27], //dim9 (intermezzio in a major)
     [1, 11, 13, 15, 17, 23], //9 omit 5th (love of my life)
-    [], // (overjoyed)
+    [1, 17, 20, 25, 29, 30], //Msus11 (overjoyed)
     [1, 17, 23, 27], //#9 omit 5th (road taken)
   ],
   [  
@@ -47,7 +47,7 @@ int[3][][] chords = [
     [1, 13, 32, 43, 44, 46, 49, 51, 53, 55, 56], //M13#11 omit 7th (crazy hot)
     [1, 13, 29, 33, 34, 44], //maddM13 (intermezzio in a major)
     [1, 8, 11, 13, 15, 16], //m9 (love of my life)
-    [], // (overjoyed)
+    [1, 13, 17, 24], //M7 omit 5th (overjoyed)
     [1, 8, 11, 17], //m7 (road taken)
   ]
 ];
