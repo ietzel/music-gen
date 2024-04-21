@@ -53,7 +53,16 @@ int[3][][] chords = [
 ];
 
 string chords(ratio) {
-  string chord = 
+  string[8][] chord_progression = new string[8][];
+  for(int i = 0; i < chord_progression.length; i++) {
+    if(rand() > ratio) {
+      chord_progression[i] = chords[0][floor(rand()*chords.length)];
+    } else if(rand() > ratio/2) {
+      chord_progression[i] = chords[1][floor(rand()*chords.length)];
+    } else {
+      chord_progression[i] = chords[2][floor(rand()*chords.length)];
+    }
+  }
   return ;
 }
 
