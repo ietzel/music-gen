@@ -6,6 +6,9 @@
 using namespace std;
 
 int[10] mtlc_ratios;
+
+int[32] int_nums = {1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 13, 16, 19, 23, 27, 32, 38, 45, 54, 64, 76, 91, 108, 128, 152, 181, 215, 256};
+
 for(int i = 0; i < 10; i++) {
   mtlc_ratios[i] = (ceil((2/(1+(sqrt(i+4))))*100)/100);
   cout << mtlc_ratios[i];
