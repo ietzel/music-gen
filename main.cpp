@@ -1,25 +1,9 @@
-#include <cmath>
-#include <iostream>
-#include <random>
-#include <string>
 #include <vector>
 #include <cstring>
 #include <cstdio>
 
+/*
 using namespace std;
-
-int[10] mtlc_ratios;
-
-int[32] int_nums = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,20,21,23,24,25,26,28,29,30,32,34,37,39,41,42,45,48,49,52,56,60,64,66,69,74,77,79,84,91,97,104,106,111,119,125,128,137,147,58,169,172,181,194,203,208,223,238,239,256,274,280,294,315,28,338,362,386,388,416,446,453,478,512,532,549,588,625,630,676,724,734,776,832,862,891,955,1013,1024,1097,1176,1190,1261,1351,1398,1448,1552,1642,1663,1783,1911,1928,2048,2195,2265,2353,2521,2660,2702,2896,3104,3125};
-
-for(int i = 0; i < 10; i++) {
-  mtlc_ratios[i] = (ceil((2/(1+(sqrt(i+4))))*100)/100);
-  cout << mtlc_ratios[i];
-}
-
-random_device rd;
-mt19937 gen(rd());
-uniform_real_distribution<> dis(0.0, 1.0);
 
 int[] tonics = [1, 4, 5];
 int[] dominants = [2, 8, 11, 12];
@@ -95,12 +79,11 @@ string chords(ratio) {
   }
   return "";
 }
+*/
 
 typedef unsigned char byte;
 
-/* First define a custom wrapper over std::vector<byte>
- * so we can quickly push_back multiple bytes with a single call.
- */
+// First define a custom wrapper over std::vector<byte> so we can quickly push_back multiple bytes with a single call.
 class MIDIvec: public std::vector<byte> {
 public:
     // Methods for appending raw data into the vector:
@@ -117,7 +100,7 @@ public:
     void AddBytes() { }
 };
 
-/* Define a class which encodes MIDI events into a track */
+// Define a class which encodes MIDI events into a track
 class MIDItrack: public MIDIvec {
 protected:
     unsigned delay, running_status;
@@ -191,7 +174,7 @@ public:
     }
 };
 
-/* Define a class that encapsulates all methods needed to craft a MIDI file. */
+// Define a class that encapsulates all methods needed to craft a MIDI file.
 class MIDIfile: public MIDIvec {
 protected:
     std::vector<MIDItrack> tracks;
@@ -287,10 +270,10 @@ int main() {
     MIDIfile file;
     file.AddLoopStart();
     
-    /* Choose instruments ("patches") for each channel: */
+    // Choose instruments ("patches") for each channel:
     static const char patches[16] = {
         0,0,0, 52,52,52, 48,48,48, 0,0,0,0,0, 35,74
-        /* 0=piano, 52=choir aahs, 48=strings, 35=fretless bass, 74=pan flute */
+        // 0=piano, 52=choir aahs, 48=strings, 35=fretless bass, 74=pan flute
     };
     for(unsigned c=0; c<16; ++c)
         if(c != 10) // Patch any other channel but not the percussion channel.
@@ -303,7 +286,7 @@ int main() {
                 int note = x, add = 0, vol = 127;
                 if(c < 3) // Piano chord { 
                     int chord = chordline[row%64];
-                    if(chord != x) 
+                    if(chord != x) {
                         note = chords[chord][c%3], add=12*5, vol=0x4B; 
                     } else if(c >= 3 && c < 5) // Aux chord (choir) { 
                         int chord = chordline2[row%64];
