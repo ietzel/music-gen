@@ -247,11 +247,14 @@ int main() {
     file.AddLoopStart();
     
     /* Choose instruments ("patches") for each channel: */
-    static const char patches[16] =
-    {
-        0,0,0, 52,52,52, 48,48,48, 0,0,0,0,0, 35,74
-        /* 0=piano, 52=choir aahs, 48=strings, 35=fretless bass, 74=pan flute */
-    };
+    static char patches[16] = {};
+    for(int i = 0; i < patches.length; i++) {
+            instrument = std::rand()*128
+            if(instrument > 127) {
+		    instrument = 127;
+	    }
+	    patches[i] = instrument;
+    }
     for(unsigned c=0; c<16; ++c)
         if(c != 10) // Patch any other channel but not the percussion channel.
             file[0].Patch(c, patches[c]);
