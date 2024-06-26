@@ -248,8 +248,8 @@ int main() {
     
     /* Choose instruments ("patches") for each channel: */
     static char patches[16] = {};
-    for(int i = 0; i < patches.length; i++) {
-            instrument = std::rand()*128
+    for(int i = 0; i < 16; i++) {
+            int instrument = std::rand()*128;
             if(instrument > 127) {
 		    instrument = 127;
 	    }
